@@ -1,0 +1,39 @@
+{
+  "name": "gurylev.com",
+  "version": "0.0.1",
+  "description": "gurylev.com",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gurylev/gurylev.com.git"
+  },
+  "author": "Gurylev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gurylev/gurylev.com/issues"
+  },
+  "homepage": "https://github.com/Gurylev/gurylev.com#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "browser-sync": "^2.9.11",
+    "bs-snippet-injector": "^2.0.1",
+    "css-mqpacker": "^4.0.0",
+    "cssnano": "^3.3.1",
+    "csswring": "^4.0.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-postcss": "^6.0.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "postcss-flexboxfixer": "0.0.3",
+    "postcss-inline-comment": "^2.0.0",
+    "postcss-reporter": "^1.2.1",
+    "precss": "^1.2.3"
+  },
+  "dependencies": {
+    "ejs-locals": "^1.0.2",
+    "express": "^4.13.3"
+  }
+}
