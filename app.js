@@ -10,7 +10,7 @@ app.set('root', __dirname);
 app.set('views', 'views');
 app.set('view engine', 'ejs');
 
-app.use(express.static('public'));
+app.use(express.static('./public'));
 
 app.get('/', function(req, res, next) {
     var locals = {};
@@ -18,4 +18,4 @@ app.get('/', function(req, res, next) {
     res.render('layout/layout', locals);
 });
 
-app.listen(3000);
+app.listen(6666);
