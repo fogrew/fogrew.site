@@ -18,4 +18,4 @@ app.get('/', function(req, res, next) {
     res.render('layout/layout', locals);
 });
 
-app.listen(6666);
+app.listen(6969);
