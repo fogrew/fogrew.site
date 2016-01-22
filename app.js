@@ -10,11 +10,11 @@ app.set('root', __dirname);
 app.set('views', 'views');
 app.set('view engine', 'ejs');
 
-app.use(express.static('.public'));
+app.use(express.static('public'));
 
 app.get('/', function(req, res, next) {
     var locals = {};
-    locals.title = 'gurylev.com';
+    locals.title = 'fogrew.site';
     res.render('layout/layout', locals);
 });
 

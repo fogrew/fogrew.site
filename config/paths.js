@@ -1,7 +1,7 @@
 'use strict';
 
 var views = 'views/';
-var dist = '.public/';
+var dist = 'public/';
 var images = 'images/';
 
 module.exports = {
