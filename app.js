@@ -14,7 +14,7 @@ app.use(express.static('./public'));
 
 app.get('/', function(req, res, next) {
     var locals = {};
-    locals.title = 'fogrew.site';
+    locals.title = 'Andrew Gurylev';
     res.render('layout/layout', locals);
 });
 

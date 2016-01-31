@@ -14,9 +14,8 @@ module.exports = {
       views+'portfolio/css/cubeportfolio.css'
     ],
     scripts: [
-      views+'layout/layout.js',
-      views+'portfolio/portfolio.js',
-      views+'portfolio/js/jquery.cubeportfolio.js'
+      views+'layout/header.js',
+      views+'layout/layout.js'
     ],
     images: images+'**/*.{jpg,png,svg}'
   },
