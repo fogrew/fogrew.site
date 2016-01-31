@@ -18,7 +18,7 @@ module.exports = {
       views+'portfolio/portfolio.js',
       views+'portfolio/js/jquery.cubeportfolio.js'
     ],
-    images: images+'**/*.{jpg,png}'
+    images: images+'**/*.{jpg,png,svg}'
   },
   dist: {
       styles: dist+'css',
