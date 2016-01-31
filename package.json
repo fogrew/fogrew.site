@@ -19,7 +19,6 @@
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "browser-sync": "^2.9.11",
-    "bs-snippet-injector": "^2.0.1",
     "css-mqpacker": "^4.0.0",
     "cssnano": "^3.3.1",
     "csswring": "^4.0.0",

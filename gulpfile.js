@@ -55,9 +55,6 @@ gulp.task('img', function() {
 gulp.task('build', ['css', 'js', 'img']);
 
 gulp.task('default', ['css', 'js', 'img'], function() {
-    bs.use(require('bs-snippet-injector'), {
-        file: 'views/layout/layout.ejs'
-    });
     bs.init({
         notify: false,
         logSnippet: false
