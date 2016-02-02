@@ -10,8 +10,6 @@ module.exports = {
       views+'layout/layout.pcss',
       views+'header/header.pcss',
       views+'about/about.pcss',
-      views+'portfolio/portfolio.pcss',
-      views+'portfolio/css/cubeportfolio.css'
     ],
     scripts: [
       views+'layout/header.js',
