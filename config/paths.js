@@ -4,12 +4,11 @@ var views = 'views/';
 var dist = 'public/';
 
 module.exports = {
+  viewsDir: views,
+  distDir: dist,
   dev: {
-    styles: [
-      views+'layout/layout.pcss',
-      views+'header/header.pcss',
-      views+'about/about.pcss',
-    ],
+    css:  views+'/**/*.pcss',
+    styles: views+'layout/style.pcss',
     scripts: [
       views+'layout/header.js',
       views+'layout/layout.js'

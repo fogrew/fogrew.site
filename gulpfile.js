@@ -17,7 +17,7 @@ require('./tasks/sync')(gulp, bs);
 gulp.task('build', ['styles', 'scripts', 'images']);
 
 gulp.task('serve', ['styles', 'scripts', 'images', 'sync'], function() {
-    gulp.watch(paths.dev.styles, ['styles']);
+    gulp.watch(paths.dev.css, ['styles']);
     gulp.watch(paths.dev.scripts, ['scripts']);
     gulp.watch(paths.dev.images, ['images']);
 });
