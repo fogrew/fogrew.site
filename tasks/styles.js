@@ -12,10 +12,18 @@ module.exports = function(gulp, bs) {
       .pipe(sourcemaps.init({loadMaps: true, debug: true}))
       .pipe(concat('style.css'))
       .pipe(require('gulp-postcss')([
-          require('precss')(),
+          require('postcss-inline-comment'),
+          require('postcss-import'),
+          require('postcss-advanced-variables'),
+          require('postcss-color-function'),
+          require('postcss-nested'),
+          require('postcss-short-spacing'),
+          require('postcss-position'),
+          require('postcss-clearfix'),
+          require('postcss-calc'),
           require('autoprefixer')({
-              browsers: ['last 1 version'],
-              cascade: false
+            browsers: ['last 1 version'],
+            cascade: false
           }),
           require('postcss-flexboxfixer')(),
           require('css-mqpacker')(),
