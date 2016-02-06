@@ -14,6 +14,7 @@ module.exports = function(gulp, bs) {
           require('postcss-import')({
             path: paths.viewsDir
           }),
+          require('stylelint'),
           require('postcss-advanced-variables'),
           require('postcss-color-function'),
           require('postcss-nested'),
@@ -22,12 +23,32 @@ module.exports = function(gulp, bs) {
           require('postcss-clearfix'),
           require('postcss-calc'),
           require('postcss-inline-svg'),
+          require('postcss-svgo')({
+            plugins: [{
+              cleanupNumericValues: {
+                floatPrecision: 0
+              }
+            }]
+          }),
           require('autoprefixer')({
             browsers: ['last 1 version'],
             cascade: false
           }),
           require('postcss-flexboxfixer')(),
           require('css-mqpacker')(),
+          require('doiuse')({
+              browsers: [
+                  'ie >= 10',
+                  '> 5%'
+              ],
+              ignore: [
+                  'calc', // @TODO: Create polyfill: UC Browser for Android (9.9)
+                  'viewport-units', // @TODO: Create polyfill: IE (10,11)
+                  'flexbox',
+                  'transforms3d',
+                  'text-size-adjust'
+              ]
+          }),
           require('cssnano')({
               convertValues: { length: false },
               discardComments: { removeAll: true }
