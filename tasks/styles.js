@@ -10,6 +10,7 @@ module.exports = function(gulp, bs) {
     return gulp.src(paths.dev.styles)
       .pipe(sourcemaps.init({loadMaps: true, debug: true}))
       .pipe(require('gulp-postcss')([
+          // require('postcss-devtools'),
           require('postcss-import')({
             path: paths.viewsDir
           }),
@@ -20,6 +21,7 @@ module.exports = function(gulp, bs) {
           require('postcss-position'),
           require('postcss-clearfix'),
           require('postcss-calc'),
+          require('postcss-inline-svg'),
           require('autoprefixer')({
             browsers: ['last 1 version'],
             cascade: false
