@@ -3,7 +3,7 @@ const paths = require('../config/paths');
 const sourcemaps = require('gulp-sourcemaps');
 
 // TODO: add criticalCSS, gulp-uncss
-// TODO: add lint: immutable-css, jscs, cssstats, yaspeller, postcss-flexbugs-fixes
+// TODO: add html-lint: w3c, yaspeller
 
 module.exports = function(gulp, bs) {
   return gulp.task('styles', () => {
@@ -49,6 +49,7 @@ module.exports = function(gulp, bs) {
                   'text-size-adjust'
               ]
           }),
+          require('immutable-css'),
           require('cssnano')({
               convertValues: { length: false },
               discardComments: { removeAll: true }

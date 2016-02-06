@@ -4,8 +4,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
 const eslint = require('gulp-eslint');
 
-// TODO: add criticalCSS, gulp-uncss
-// TODO: add lint: immutable-css, jscs, cssstats, yaspeller, postcss-flexbugs-fixes
+// TODO: add lint: jscs
 
 module.exports = function(gulp, bs) {
   return gulp.task('scripts', () => {
