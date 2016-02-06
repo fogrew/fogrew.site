@@ -2,7 +2,6 @@
 
 var views = 'views/';
 var dist = 'public/';
-var images = 'images/';
 
 module.exports = {
   dev: {
@@ -15,7 +14,7 @@ module.exports = {
       views+'layout/header.js',
       views+'layout/layout.js'
     ],
-    images: images+'**/*.{jpg,png,svg}'
+    images: views+'**/*.{jpg,png,svg}'
   },
   dist: {
       styles: dist+'css',
