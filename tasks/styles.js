@@ -12,7 +12,6 @@ module.exports = function(gulp, bs) {
       .pipe(sourcemaps.init({loadMaps: true, debug: true}))
       .pipe(concat('style.css'))
       .pipe(require('gulp-postcss')([
-          require('postcss-inline-comment'),
           require('postcss-import'),
           require('postcss-advanced-variables'),
           require('postcss-color-function'),

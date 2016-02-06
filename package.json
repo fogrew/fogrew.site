@@ -30,7 +30,6 @@
     "gulp-sourcemaps": "^1.6.0",
     "immutable": "^3.7.6",
     "postcss-flexboxfixer": "0.0.4",
-    "postcss-inline-comment": "^2.0.0",
     "postcss-advanced-variables": "^1.2.2",
     "postcss-calc": "^5.2.0",
     "postcss-clearfix": "^0.2.0",
