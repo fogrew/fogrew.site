@@ -1,77 +1,76 @@
 .header {
-    font-family: Candara, fantasy;
-    text-align: center;
-    padding: 2em 1em;
+  display: block;
+  font-family: Candara, fantasy;
+  text-align: center;
+  padding: 2em 1em;
+  font-size: 6vw;
+  background-position: bottom center;
+  background-repeat: repeat-x;
+  background-size: 1em;
+  background-image: svg-load("i/border.svg");
+  @media (min-width: 500px) {
     font-size: 2em;
-    font-size: 6vw;
-    background-position: bottom center;
-    background-repeat: repeat-x;
-    background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMzAnIGhlaWdodD0nMzAnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgIHZpZXdCb3g9JzAgMCAxMDAgMTAwJz4KCTxsaW5lYXJHcmFkaWVudCBpZD0nZzEnIHgxPScwJScgeTE9JzAlJyB4Mj0nMTAwJScgeTI9JzAlJz4KCQk8c3RvcCBvZmZzZXQ9JzAlJyBzdHlsZT0nc3RvcC1jb2xvcjojNTI0ODQ2O3N0b3Atb3BhY2l0eToxJyAvPgoJCTxzdG9wIG9mZnNldD0nMTAwJScgc3R5bGU9J3N0b3AtY29sb3I6I2Y3ZjZlZTtzdG9wLW9wYWNpdHk6MCcgLz4KCTwvbGluZWFyR3JhZGllbnQ+Cgk8bGluZWFyR3JhZGllbnQgaWQ9J2cyJyB4MT0nMCUnIHkxPScwJScgeDI9JzAlJyB5Mj0nMTAwJSc+CgkJPHN0b3Agb2Zmc2V0PScwJScgc3R5bGU9J3N0b3AtY29sb3I6IzUyNDg0NjtzdG9wLW9wYWNpdHk6MScgLz4KCQk8c3RvcCBvZmZzZXQ9JzEwMCUnIHN0eWxlPSdzdG9wLWNvbG9yOiNmN2Y2ZWU7c3RvcC1vcGFjaXR5OjAnIC8+Cgk8L2xpbmVhckdyYWRpZW50PgoJPHJhZGlhbEdyYWRpZW50IGlkPSdnMycgY3g9JzAlJyBjeT0nMCUnIHI9JzEwMCUnPgoJCTxzdG9wIG9mZnNldD0nMCUnIHN0eWxlPSdzdG9wLWNvbG9yOiM1MjQ4NDY7c3RvcC1vcGFjaXR5OjEnIC8+CgkJPHN0b3Agb2Zmc2V0PScxMDAlJyBzdHlsZT0nc3RvcC1jb2xvcjojZjdmNmVlO3N0b3Atb3BhY2l0eTowJyAvPgoJPC9yYWRpYWxHcmFkaWVudD4KCTxnIHRyYW5zZm9ybT0ncm90YXRlKDQ1KSB0cmFuc2xhdGUoMjEuMiAtNDkuNSknPgoJCTxyZWN0IHg9Jy01MCUnIHk9Jy01MCUnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9JyNmN2Y2ZWUnIC8+CgkJPHJlY3QgeD0nNTAlJyB5PSctNTAlJyB3aWR0aD0nMTAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjZzEpJyAvPgoJCTxyZWN0IHg9Jy01MCUnIHk9JzUwJScgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAlJyBmaWxsPSd1cmwoI2cyKScgLz4KCQk8cmVjdCB4PSc1MCUnIHk9JzUwJScgd2lkdGg9JzEwJScgaGVpZ2h0PScxMCUnIGZpbGw9J3VybCgjZzMpJyAvPgoJPC9nPgo8L3N2Zz4=);
-    background-size: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &:before {
+    content: "";
+    display: block;
+    width: 5em;
+    height: 5.4em;
+    margin: 0 auto 2em;
+    text-align: center;
+    background: svg-load("i/logo.svg", fill: #544) center top no-repeat;
+    background-size: 5em;
+  }
+  &:hover:before {
+    animation: spin 2s linear forwards;
+  }
+  &__title {
+    line-height: 1em;
+  }
+  &__about {
+    font-size: 7vw;
+    line-height: 1.1em;
     @media (min-width: 500px) {
-      font-size: 2em;
-      padding-left: 10px;
-      padding-right: 10px;
+      font-size: 1em;
     }
-    &:before {
-      content: '';
-      display: block;
-      width: 5em;
-      height: 5.4em;
-      margin: 0 auto 2em;
-      text-align: center;
-      background: url('/i/favicon.svg') center top no-repeat;
-      background-size: 5em;
-    }
-    &:hover:before {
-      -webkit-animation:spin 2s linear forwards;
-      -moz-animation:spin 2s linear forwards;
-      animation:spin 2s linear forwards;
-    }
-    &__about {
-        font-size: 1.4em;
-        font-size: 7vw;
-        line-height: 1.1em;
-        @media (min-width: 500px) {
-          font-size: 1em;
-        }
-    }
+  }
 }
 @keyframes spin {
-    0% {
-        transform: rotate(360deg);
-    },
-    100% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(360deg);
+  },
+  100% {
+    transform: rotate(0deg);
+  }
 }
+/* .social {
+  display: flex;
 
-.social {
-    display: flex;
+  width: 100%;
+  max-width: 400px;
 
-    width: 100%;
-    max-width: 400px;
-
-    justify-content: flex-start;
-}
-.social__link {
-    flex: 1 1 100%;
-}
-.social__link_habr {
-    color: #a0c2ce;
-}
-.social__link_hash {
-    color: #af7817;
-}
-.social__link_linkedin {
-    color: #287bbc;
-}
-.social__link_vk {
-    color: #2b587a;
-}
-.social__link_fb {
-    color: #3b5998;
-}
-.social__link_g-plus {
-    color: #dd4b39;
-}
+  justify-content: flex-start;
+  &__link {
+      flex: 1 1 100%;
+  }
+  &__link_habr {
+      color: #a0c2ce;
+  }
+  &__link_hash {
+      color: #af7817;
+  }
+  &__link_linkedin {
+      color: #287bbc;
+  }
+  &__link_vk {
+      color: #2b587a;
+  }
+  &__link_fb {
+      color: #3b5998;
+  }
+  &__link_g-plus {
+      color: #dd4b39;
+  }
+} */

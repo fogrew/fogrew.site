@@ -2,20 +2,18 @@
 
 var views = 'views/';
 var dist = 'public/';
-var images = 'images/';
 
 module.exports = {
+  viewsDir: views,
+  distDir: dist,
   dev: {
-    styles: [
-      views+'layout/layout.pcss',
-      views+'header/header.pcss',
-      views+'about/about.pcss',
-    ],
+    css:  views+'/**/*.pcss',
+    styles: views+'layout/style.pcss',
     scripts: [
       views+'layout/header.js',
       views+'layout/layout.js'
     ],
-    images: images+'**/*.{jpg,png,svg}'
+    images: views+'**/*.{jpg,png,svg}'
   },
   dist: {
       styles: dist+'css',
