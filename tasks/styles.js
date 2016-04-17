@@ -60,7 +60,9 @@ module.exports = function(gulp, bs) {
           })
       ]))
       .pipe(sourcemaps.write({sourceRoot: './'}))
-      .pipe(require('gulp-rename')('style.css'))
+      .pipe(require('gulp-rename')({
+        extname: '.css'
+      }))
       .pipe(gulp.dest(paths.dist.styles))
       .pipe(bs.stream());
   });
