@@ -1,0 +1,9 @@
+<div class="grid">
+<% list.forEach(item => { %>
+<%  if(item.type == 'svg') { %>
+  <a class="box" href="<%- item.url %>" title="<%= item.title %>" data-jets="<%= item.name.toLowerCase() %> <%= item.title.toLowerCase() %> <%= item.tags.toLowerCase() %>"><svg><use xlink:href="#<%= item.name %>"></svg></a>
+<%  } else { %>
+  <a class="box <%= item.name %>" href="<%- item.url %>" title="<%= item.title %>" data-jets="<%= item.name.toLowerCase() %> <%= item.title.toLowerCase() %> <%= item.tags.toLowerCase() %>"></a>
+<%  } %>
+<% }); %>
+</div>
