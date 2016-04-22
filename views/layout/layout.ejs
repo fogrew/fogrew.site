@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title><%- title %></title>
 	<meta name="keywords" content="принципы, подход" />
-	<meta name="description" content="Мои принципы работы - это то, что требуется от современного верстальщика" />
+	<meta name="description" content="<%- description %>" />
 	<meta name="viewport" content="width=device-width">
 
 	<meta http-equiv="x-dns-prefetch-control" content="on">
@@ -21,8 +21,7 @@
 	<link rel="profile" href="http://microformats.org/profile/hcard">
 </head>
 <body class="layout">
-	<% include ../header/header %>
-	<% include ../about/about %>
-	<%/* include ../portfolio/portfolio */%>
+	<%- include('../header/header') -%>
+	<%- include(content) -%>
 </body>
 </html>
