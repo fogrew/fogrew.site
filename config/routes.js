@@ -1,6 +1,5 @@
 'use strict';
-const works = require('./works');
-const home = require('./home');
+const home = require('config/home');
 
 module.exports = {
   '/': {
