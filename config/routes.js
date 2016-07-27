@@ -3,7 +3,7 @@ const home = require('./home');
 
 module.exports = {
   '/': {
-    title: 'Fogrew @ Andrew Gurylev',
+    title: 'Fogrew @ Andrey Gurylev',
     keywords: '',
     description: 'thoughtful, attentive, neat, careful, heedful, mindful, solicitous, regardful frontend developer',
     layout: 'layout/layout',
