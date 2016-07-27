@@ -45,32 +45,33 @@
     transform: rotate(0deg);
   }
 }
-/* .social {
+.social {
   display: flex;
 
   width: 100%;
   max-width: 400px;
+  margin: auto;
 
-  justify-content: flex-start;
+  justify-content: center;
   &__link {
-      flex: 1 1 100%;
+    flex: 1 1 100%;
   }
-  &__link_habr {
-      color: #a0c2ce;
+  &__icon {
+    width: 50px;
+    height: 50px;
+    fill: #544;
+    transition: fill .2s ease;
+    &_linkedin:hover {
+        fill: #287bbc;
+    }
+    &_vkontakte:hover {
+        fill: #2b587a;
+    }
+    &_facebook:hover {
+        fill: #3b5998;
+    }
+    &_twitter:hover {
+      fill: #4099ff;
+    }
   }
-  &__link_hash {
-      color: #af7817;
-  }
-  &__link_linkedin {
-      color: #287bbc;
-  }
-  &__link_vk {
-      color: #2b587a;
-  }
-  &__link_fb {
-      color: #3b5998;
-  }
-  &__link_g-plus {
-      color: #dd4b39;
-  }
-} */
+}
