@@ -1,6 +1,7 @@
 'use strict';
 const paths = require('../config/paths');
 const sourcemaps = require('gulp-sourcemaps');
+const sass = require('gulp-sass');
 
 // TODO: add criticalCSS, gulp-uncss
 // TODO: add html-lint: w3c, yaspeller
@@ -9,20 +10,16 @@ module.exports = function(gulp, bs) {
   return gulp.task('styles', () => {
     return gulp.src(paths.dev.styles)
       .pipe(sourcemaps.init({loadMaps: true, debug: true}))
+      .pipe(sass({
+          outputStyle: 'expanded',
+          indentWidth: 4
+      }).on('error', sass.logError))
       .pipe(require('gulp-postcss')([
           // require('postcss-devtools'),
-          require('postcss-import')({
-            path: paths.viewsDir
-          }),
           require('stylelint'),
-          require('postcss-advanced-variables'),
-          require('postcss-color-function'),
-          require('postcss-nested'),
-          require('postcss-short-spacing'),
-          require('postcss-position'),
-          require('postcss-clearfix'),
-          require('postcss-calc'),
-          require('postcss-inline-svg'),
+          require('postcss-inline-svg')({
+            path: 'views'
+          }),
           require('postcss-svgo')({
             plugins: [{
               cleanupNumericValues: {
@@ -34,7 +31,6 @@ module.exports = function(gulp, bs) {
             browsers: ['last 1 version'],
             cascade: false
           }),
-          require('postcss-flexboxfixer')(),
           require('css-mqpacker')(),
           require('doiuse')({
               browsers: [
@@ -50,19 +46,12 @@ module.exports = function(gulp, bs) {
               ]
           }),
           require('immutable-css'),
-          require('cssnano')({
-              convertValues: { length: false },
-              discardComments: { removeAll: true }
-          }),
-          require('csswring')(),
+          require('postcss-csso'),
           require('postcss-reporter')({
               clearMessages: true
           })
-      ]))
+      ], { syntax: require('postcss-scss') }))
       .pipe(sourcemaps.write({sourceRoot: './'}))
-      .pipe(require('gulp-rename')({
-        extname: '.css'
-      }))
       .pipe(gulp.dest(paths.dist.styles))
       .pipe(bs.stream());
   });
