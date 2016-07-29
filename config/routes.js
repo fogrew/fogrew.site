@@ -5,6 +5,7 @@ module.exports = {
   '/': {
     title: 'Fogrew @ Andrey Gurylev',
     keywords: '',
+    image: '',
     description: 'thoughtful, attentive, neat, careful, heedful, mindful, solicitous, regardful frontend developer',
     layout: 'layout/layout',
     content: '../about/about'
@@ -12,6 +13,7 @@ module.exports = {
   '/home': {
     title: 'Homepage',
     keywords: '',
+    image: '',
     description: 'homepage for my browser',
     layout: 'homepage/homepage',
     content: '../grid/grid',
