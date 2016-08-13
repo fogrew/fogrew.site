@@ -7,14 +7,12 @@ module.exports = {
   viewsDir: views,
   distDir: dist,
   dev: {
-    css:  views+'/**/*.pcss',
+    css:  views+'/**/*.scss',
     styles: [
-      views+'layout/style.pcss',
-      views+'homepage/homepage.pcss',
+      views+'layout/style.scss',
+      views+'homepage/homepage.scss',
     ],
-    scripts: [
-      views+'layout/layout.js'
-    ],
+    scripts: views+'*/js/*.js',
     images: views+'**/*.{jpg,png,svg}'
   },
   dist: {

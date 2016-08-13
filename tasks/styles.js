@@ -1,38 +1,56 @@
 'use strict';
 const paths = require('../config/paths');
+const env = require('../config/env');
+
 const sourcemaps = require('gulp-sourcemaps');
+const filesize = require('gulp-filesize');
 const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const gulpif = require('gulp-if');
+const stylelint = require('stylelint');
+const postcssInlineSvg = require('postcss-inline-svg');
+const svgo = require('postcss-svgo');
+const autoprefixer = require('autoprefixer');
+const mqpacker = require('css-mqpacker');
+const doiuse = require('doiuse');
+const immutableCss = require('immutable-css');
+const csso = require('postcss-csso');
+const reporter = require('postcss-reporter');
+const postcssScss = require('postcss-scss');
+const debug = require('postcss-devtools');
+const colorguard = require('colorguard');
 
 // TODO: add criticalCSS, gulp-uncss
 // TODO: add html-lint: w3c, yaspeller
+// TODO: add gulp-csslint, criticalCSS, gulp-uncss, usedcss
 
 module.exports = function(gulp, bs) {
   return gulp.task('styles', () => {
     return gulp.src(paths.dev.styles)
-      .pipe(sourcemaps.init({loadMaps: true, debug: true}))
+      .pipe(gulpif(!env.min, sourcemaps.init()))
       .pipe(sass({
           outputStyle: 'expanded',
           indentWidth: 4
       }).on('error', sass.logError))
-      .pipe(require('gulp-postcss')([
-          // require('postcss-devtools'),
-          require('stylelint'),
-          require('postcss-inline-svg')({
+      .pipe(postcss([
+          env.dev ? debug : () => {},
+          env.lint ? stylelint : () => {},
+          postcssInlineSvg({
             path: 'views'
           }),
-          require('postcss-svgo')({
+          env.min ? svgo({
             plugins: [{
               cleanupNumericValues: {
                 floatPrecision: 0
               }
             }]
-          }),
-          require('autoprefixer')({
+          }) : () => {},
+          autoprefixer({
             browsers: ['last 1 version'],
             cascade: false
           }),
-          require('css-mqpacker')(),
-          require('doiuse')({
+          mqpacker,
+          env.lint ? doiuse({
               browsers: [
                   'ie >= 10',
                   '> 5%'
@@ -44,15 +62,17 @@ module.exports = function(gulp, bs) {
                   'transforms3d',
                   'text-size-adjust'
               ]
-          }),
-          require('immutable-css'),
-          require('postcss-csso'),
-          require('postcss-reporter')({
+          }) : () => {},
+          env.lint ? immutableCss : () => {},
+          env.lint ? colorguard : () => {},
+          env.min ? csso : () => {},
+          env.dev ? reporter({
               clearMessages: true
-          })
-      ], { syntax: require('postcss-scss') }))
-      .pipe(sourcemaps.write({sourceRoot: './'}))
+          }) : () => {}
+      ], { syntax: postcssScss }))
+      .pipe(gulpif(!env.min, sourcemaps.write()))
       .pipe(gulp.dest(paths.dist.styles))
+      .pipe(gulpif(env.debug, filesize()))
       .pipe(bs.stream());
   });
 };

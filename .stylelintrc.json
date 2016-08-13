@@ -1,4 +1,7 @@
 {
+  "plugins": [
+    "stylelint-scss"
+  ],
   "rules": {
     "max-empty-lines": 2,
     "color-hex-case": "lower",
@@ -52,6 +55,7 @@
     "media-query-list-comma-space-after": "always",
     "media-query-list-comma-space-before": "never",
     "at-rule-no-vendor-prefix": true,
+    "at-rule-blacklist": ["debug"],
     "comment-whitespace-inside": "always",
     "no-eol-whitespace": true,
     "no-missing-end-of-source-newline": null

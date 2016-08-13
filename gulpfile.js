@@ -5,7 +5,6 @@ const paths = require('./config/paths');
 
 // utilites
 const gulp = require('gulp');
-const sourcemaps = require('gulp-sourcemaps');
 const bs = require('browser-sync');
 
 // tasks
