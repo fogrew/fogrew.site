@@ -1,4 +1,4 @@
 trigger:
   type: deploy
   script:
-    - "curl -X POST -F token=TOKEN -F ref=REF_NAME http://git.jkoff.ru:8081/api/v3/projects/7/trigger/builds"
+    - "curl -X POST -F token=60cb940fcca21fe5e15d109ef56bc1 -F ref=REF_NAME http://git.jkoff.ru:8081/api/v3/projects/7/trigger/builds"
