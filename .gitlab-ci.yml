@@ -1,4 +1,11 @@
-trigger:
-  type: deploy
-  script:
-    - "curl -X POST -F token=60cb940fcca21fe5e15d109ef56bc1 -F ref=master http://git.jkoff.ru:8081/api/v3/projects/7/trigger/builds"
+before_script:
+  - npm install
+  - forever restart app.js
+
+# stages:
+#   - production
+#
+# ci-trigger:
+#   type: deploy
+#   script:
+#     - "curl -X POST -F token=60cb940fcca21fe5e15d109ef56bc1 -F ref=master http://git.jkoff.ru:8081/api/v3/projects/7/trigger/builds"
