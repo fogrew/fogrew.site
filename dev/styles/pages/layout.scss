@@ -15,7 +15,7 @@
   flex-flow: column;
   font-smoothing: antialiased;
   text-size-adjust: 100%;
-  tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
   a {
     transition: color .2s ease;
 

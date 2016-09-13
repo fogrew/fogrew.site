@@ -2,50 +2,49 @@
 <html class="no-js" itemscope itemtype="http://schema.org/Person" lang="en">
 <head>
   <meta charset="utf-8">
-  <title><%- title %></title>
-  <meta name="keywords" content="<%- keywords %>" />
-  <meta name="description" content="<%- description %>" />
+  <title>{{ title }}</title>
+  <meta name="keywords" content="{{ keywords }}" />
+  <meta name="description" content="{{ description }}" />
 
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="/i/favicon.png">
 
   <!-- Schema.org markup (Google) -->
-  <meta itemprop="name" content="<%- title %>">
-  <meta itemprop="description" content="<%- description %>">
-  <meta itemprop="image" content="<%- image %>">
+  <meta itemprop="name" content="{{ title }}">
+  <meta itemprop="description" content="{{ description }}">
+  <meta itemprop="image" content="{{ image }}">
 
   <!-- Twitter Card markup-->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@AndrewGurylev">
-  <meta name="twitter:title" content="<%- title %>">
-  <meta name="twitter:description" content="<%- description %>">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
   <meta name="twitter:creator" content="@AndrewGurylev">
   <!-- Twitter summary card with large image must be at least 280x150px -->
-  <meta name="twitter:image" content="<%- image %>">
-  <meta name="twitter:image:alt" content="<%- description %>">
+  <meta name="twitter:image" content="{{ image }}">
+  <meta name="twitter:image:alt" content="{{ description }}">
 
   <!-- Open Graph markup (Facebook, Pinterest) -->
-  <meta property="og:title" content="<%- title %>" />
+  <meta property="og:title" content="{{ title }}" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="<%- image %>" />
-  <meta property="og:image" content="<%- image %>" />
-  <meta property="og:description" content="<%- description %>" />
-  <meta property="og:site_name" content="<%- image %>" />
+  <meta property="og:url" content="{{ image }}" />
+  <meta property="og:image" content="{{ image }}" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta property="og:site_name" content="{{ image }}" />
 
   <link rel="publisher" href="https://plus.google.com/100738358447395554565">
   <link rel="profile" href="http://microformats.org/profile/hcard">
 
-  <link rel="canonical" hreflang="ru-RU" href="http://grlv.ru/how/" itemprop="url"/>
+  <link rel="canonical" hreflang="ru-RU" href="http://grlv.ru/how/" />
   <link rel="alternate" hreflang="en-US" href="http://gurylev.com/how/" />
 
-  <meta http-equiv="x-dns-prefetch-control" content="on">
   <link rel="dns-prefetch" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://ajax.googleapis.com">
 </head>
 <body class="layout">
-	<%- include('../header/header') -%>
-	<%- include(content) -%>
+  {% include 'blocks/header.njk' %}
+	{% block content %}{% endblock %}
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

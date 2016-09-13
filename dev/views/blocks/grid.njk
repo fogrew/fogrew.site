@@ -1,0 +1,9 @@
+<div class="grid">
+{% asyncAll item in list %}
+{% if item.type == 'svg' %}
+  <a class="box" href="{{ item.url }}" title="{{ item.title }}" data-jets="{{ item.name | lower }} {{ item.title | lower }} {{ item.tags | lower }}"><svg><use xlink:href="#{{ item.name }}" /></svg></a>
+{% else %}
+  <a class="box {{ item.name }}" href="{{ item.url }}" title="{{ item.title }}" data-jets="{{ item.name | lower }} {{ item.title | lower }} {{ item.tags | lower }}"></a>
+{% endif %}
+{% endall %}
+</div>
