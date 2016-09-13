@@ -1,15 +1,12 @@
 {
   "name": "gurylev.com",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "gurylev.com",
   "main": "app.js",
   "scripts": {
-    "start": "NODE_ENV=production PORT=6969 NODE_PATH=. node app.js",
-    "start:dev": "NODE_ENV=development PORT=6969 NODE_PATH=. node app.js",
-    "build": "NODE_ENV=production NODE_PATH=. gulp build",
-    "serve": "NODE_PATH=. gulp serve --lint",
-    "deploy": "NODE_ENV=production npm run build && npm run start",
-    "watch": "NODE_ENV=development npm run start:dev & npm run serve",
+    "start": "npm run build",
+    "build": "NODE_ENV=production gulp build",
+    "serve": "gulp serve --lint",
     "docs": "gulp docs"
   },
   "repository": {
