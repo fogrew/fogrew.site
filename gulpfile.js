@@ -1,5 +1,7 @@
 'use strict';
 
+/* eslint-env node */
+
 // configs
 const paths = require('./config/paths');
 

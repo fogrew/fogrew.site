@@ -1,6 +1,8 @@
 'use strict';
 
 var views = 'views/';
+/* eslint-env node */
+
 var dist = 'public/';
 
 module.exports = {

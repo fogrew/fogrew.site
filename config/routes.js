@@ -1,4 +1,7 @@
 'use strict';
+
+/* eslint-env node */
+
 const home = require('./home');
 
 module.exports = {

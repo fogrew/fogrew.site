@@ -1,5 +1,7 @@
 'use strict';
 
+/* eslint-env node */
+
 /**
  * ENV
  * @desc An object containing the user environment
@@ -24,7 +26,7 @@ var env = require('minimist')(process.argv.slice(2), extendOptions);
 const defaultOptions = {
   dev: process.env.NODE_ENV === 'development',
   debug: env.debug || false // FIXME
-}
+};
 
 env = Object.assign(env, defaultOptions);
 

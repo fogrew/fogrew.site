@@ -1,4 +1,7 @@
 'use strict';
+
+/* eslint-env node */
+
 const paths = require('../config/paths');
 
 const changed = require('gulp-changed');
