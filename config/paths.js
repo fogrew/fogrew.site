@@ -1,8 +1,8 @@
 'use strict';
 
-var views = 'views/';
 /* eslint-env node */
 
+var views = 'dev/views/';
 var dist = 'public/';
 
 module.exports = {
@@ -14,6 +14,8 @@ module.exports = {
       views+'layout/style.scss',
       views+'homepage/homepage.scss',
     ],
+    views: views+'**/*.njk',
+    pages: views+'pages/*/*.njk',
     scripts: views+'*/js/*.js',
     images: views+'**/*.{jpg,png,svg}'
   },

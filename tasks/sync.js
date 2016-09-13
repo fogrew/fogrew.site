@@ -9,7 +9,6 @@ const env = require('../config/env');
 module.exports = function(gulp, bs) {
   return gulp.task('sync', function() {
     bs.init({
-        proxy: 'localhost:' + config.port,
         port: config.devPort,
         ui: env.debug ? {
           port: config.uiPort
@@ -22,7 +21,8 @@ module.exports = function(gulp, bs) {
         reloadOnRestart: true,
         notify: false,
         open: env.open ? 'external' : false,
-        baseDir: paths.dist
+        baseDir: paths.distDir,
+        server: ['.', paths.distDir]
     });
   });
 };
