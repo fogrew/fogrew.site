@@ -1,18 +1,19 @@
 image: node:latest
 
-cache:
-  paths:
-    - node_modules/
-before_script:
-  - npm install --depth=0
-  - npm install -g gulp
-script:
-  - gulp build
-artifacts:
-  paths:
-  - public
-only:
-  - master
+production:
+  cache:
+    paths:
+      - node_modules/
+  before_script:
+    - npm install --depth=0
+    - npm install -g gulp
+  script:
+    - gulp build
+  artifacts:
+    paths:
+    - public
+  only:
+    - master
 
 # ci-trigger:
 #   type: deploy
