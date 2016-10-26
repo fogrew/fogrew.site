@@ -9,7 +9,7 @@ production:
   before_script:
     - npm update --depth=0
   after_script:
-    - cp public /home/sites/fogrew/fogrew.site/public
+    - cp -R ./public /home/sites/fogrew/fogrew.site/public
   script:
     - gulp build
   artifacts:
