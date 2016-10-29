@@ -8,10 +8,7 @@ npm i
 
 ## Commands
 ``` console
-# run server
-forever start
-
-# generate stuff
+# generate site
 gulp build
 
 # dev mode
