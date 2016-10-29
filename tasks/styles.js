@@ -10,7 +10,7 @@ const filesize = require('gulp-filesize');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const gulpif = require('gulp-if');
-const stylelint = require('stylelint');
+const stylelint = require('gulp-stylelint');
 const postcssInlineSvg = require('postcss-inline-svg');
 const svgo = require('postcss-svgo');
 const autoprefixer = require('autoprefixer');
@@ -35,9 +35,15 @@ module.exports = function(gulp, bs) {
           outputStyle: 'expanded',
           indentWidth: 4
       }).on('error', sass.logError))
+      .pipe(gulpif(env.lint, stylelint({
+        failAfterError: true,
+        reporters: [
+          { formatter: 'verbose', console: true }
+        ],
+        debug: true
+      })))
       .pipe(postcss([
           env.dev ? debug : () => {},
-          env.lint ? stylelint : () => {},
           postcssInlineSvg({
             path: 'views'
           }),
