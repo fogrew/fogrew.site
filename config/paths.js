@@ -14,6 +14,7 @@ module.exports = {
       views+'layout/style.scss',
       views+'homepage/homepage.scss',
     ],
+    svg: 'dev/images/sprites/vector',
     views: views+'**/*.njk',
     pages: views+'pages/*/*.njk',
     scripts: views+'*/js/*.js',
@@ -23,6 +24,7 @@ module.exports = {
       pages: dist,
       styles: dist+'css',
       scripts: dist+'js',
-      images: dist+'i'
+      images: dist+'i',
+      svg: dist+'i/svg'
   }
 };

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="mactorrent" viewBox="0 0 69 69">
+  <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+    <circle cx="33.5" cy="33.5" r="33.5" stroke="#000"/>
+    <path fill="#000" d="M12 8l1-1 21 47L54 7l1 1v35h11l-1 1H55v15l-1 1V44H39l-5 12L13 9v51l-1-1V8zm42 1v34H39.4L54 9z"/>
+  </g>
+</svg>
