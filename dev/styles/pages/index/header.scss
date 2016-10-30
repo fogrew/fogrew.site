@@ -7,23 +7,19 @@
   background-position: bottom center;
   background-repeat: repeat-x;
   background-size: 1em;
-  background-image: svg-load("header/i/border.svg");
+  background-image: url("/i/border.svg");
   @media (min-width: 500px) {
     font-size: 2em;
     padding-left: 10px;
     padding-right: 10px;
   }
-  &:before {
-    content: "";
-    display: block;
+  &__logo {
     width: 5em;
     height: 5.4em;
-    margin: 0 auto 2em;
+    margin: 0 auto;
     text-align: center;
-    background: svg-load("header/i/logo.svg", fill=#544) center top no-repeat;
-    background-size: 5em;
   }
-  &:hover:before {
+  &:hover &__logo {
     animation: spin 2s linear forwards;
   }
   &__title {
