@@ -9,11 +9,8 @@ module.exports = {
   viewsDir: views,
   distDir: dist,
   dev: {
-    css:  views+'/**/*.scss',
-    styles: [
-      views+'layout/style.scss',
-      views+'homepage/homepage.scss',
-    ],
+    scss:  'dev/styles/**/*.scss',
+    styles: 'dev/styles/pages/*.scss',
     svg: 'dev/images/sprites/vector',
     views: views+'**/*.njk',
     pages: views+'pages/*/*.njk',

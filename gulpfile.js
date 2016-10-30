@@ -20,7 +20,7 @@ require('./tasks/sync')(gulp, bs);
 gulp.task('build', ['styles', 'scripts', 'images', 'svg-symbols', 'markup']);
 
 gulp.task('serve', ['styles', 'scripts', 'images', 'svg-symbols', 'markup', 'sync'], function() {
-    gulp.watch(paths.dev.css, ['styles']);
+    gulp.watch(paths.dev.scss, ['styles']);
     gulp.watch(paths.dev.scripts, ['scripts']);
     gulp.watch(paths.dev.images, ['images']);
     gulp.watch(paths.dev.views, ['markup']);
