@@ -97,7 +97,7 @@ module.exports = [
   {
     name: 'lingualeo',
     title: 'LinguaLeo',
-    type: 'png',
+    type: 'svg',
     url: 'https://lingualeo.com/',
     tags: ''
   },
@@ -188,7 +188,7 @@ module.exports = [
   {
     name: 'rutracker',
     title: 'RuTracker',
-    type: 'png',
+    type: 'svg',
     url: 'https://rutracker.net/',
     tags: ''
   },
@@ -202,14 +202,14 @@ module.exports = [
   {
     name: 'noname',
     title: 'NoName Club',
-    type: 'png',
+    type: 'svg',
     url: 'https://nnmclub.to/',
     tags: ''
   },
   {
     name: 'rutor',
     title: 'RUTOR',
-    type: 'png',
+    type: 'svg',
     url: 'http://new-rutor.org/',
     tags: ''
   },
