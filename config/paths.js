@@ -14,7 +14,8 @@ module.exports = {
     svg: 'dev/images/sprites/vector',
     views: views+'**/*.njk',
     pages: views+'pages/*/*.njk',
-    scripts: views+'*/js/*.js',
+    scripts: 'dev/scripts/pages/**/*.js',
+    jsModules: 'dev/scripts/pages/*.js',
     images: views+'**/*.{jpg,png,svg}'
   },
   dist: {

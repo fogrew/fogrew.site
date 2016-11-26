@@ -6,14 +6,12 @@
   <meta name="description" content="{{ description }}" />
   <meta name="viewport" content="width=device-width">
 
-  <link rel="dns-prefetch" href="//ajax.googleapis.com">
-  <link rel="preconnect" href="//ajax.googleapis.com">
+  <meta name="theme-color" content="#000">
 
   <link rel="canonical" hreflang="ru-RU" href="http://grlv.ru/how/" />
   <link rel="alternate" hreflang="en-US" href="http://gurylev.com/how/" />
 
   <link rel="stylesheet" href="css/homepage.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
   <link rel="shortcut icon" href="/i/favicon.png">
 
   <link rel="publisher" href="https://plus.google.com/100738358447395554565">
@@ -21,10 +19,12 @@
 </head>
 <body class="homepage">
   <div class="wrap">
-    <div class="search">
-      <input type="text" class="find" placeholder="Type first symbol..." tabindex="0">
-      <svg class="magnify"><use xlink:href="i/svg/homepage.symbol.svg#search" /></svg>
-    </div>
+    <form class="search">
+      <input type="text" class="find" placeholder="Type first symbol..." tabindex="0" required="required" autofocus>
+      <svg class="magnify"><use xlink:href="i/svg/homepage.symbol.svg#search"></use></svg>
+      <div class="reset">×</div>
+      <div class="label">for example, <span class="tag">social</span>, <span class="tag">code</span>, <span class="tag">english</span>, <span class="tag">torrent</span></div>
+    </form>
     {% block content %}{% endblock %}
   </div>
   <div class="tips">
@@ -34,29 +34,6 @@
     <p>- add indicate about messages</p>
     <p>- add professional hashtags timeline</p>
   </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="https://nexts.github.io/Jets.js/js/jets.js"></script>
-<script>
-(function($){
-  $(window).load(function(){
-    $(".grid").mCustomScrollbar({
-      scrollInertia: 100,
-      theme: 'inset',
-      axis: 'y',
-      live: 'once',
-      keyboard:{ enable: false },
-      callbacks:{
-        onInit: function(){
-          var jets = new Jets({
-            searchTag: '.find',
-            contentTag: '.mCSB_container'
-          });
-        }
-      }
-    });
-  });
-})(jQuery);
-</script>
+<script src="/js/homepage.js"></script>
 </body>
 </html>

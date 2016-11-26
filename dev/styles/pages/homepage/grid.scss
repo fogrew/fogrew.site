@@ -1,63 +1,42 @@
 $color: #fff;
 
 .grid {
-  max-height: 80vh;
+  max-height: 75vh;
   width: 85vw;
-  padding-right: 16px;
   display: flex;
   flex-wrap: wrap;
-  overflow: hidden;
+  overflow: auto;
 }
-.grid.mCustomScrollbar {
-  padding-right: 0;
-}
-.mCSB_container {
-  display: flex;
-  flex-wrap: wrap;
-}
-.mCSB_inside > .mCSB_container {
-  margin-right: 16px !important;
-}
-.mCustomScrollBox {
-  max-height: 80vh !important;
-}
+
 .box {
   flex: auto;
-  width: calc(20% - 8px);
+  width: calc(100% / 5 - 8px);
+  height: calc(9vw + 6px);
   margin: 4px;
-  height: calc(20vh - 8px);
   display: flex;
-  background-color: color($color a(50%));
+  background-color: rgba($color, 0.5);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  /* opacity: .5; */
+  opacity: .8;
   transition: .2s ease;
   border-radius: 2px;
   outline: none;
+  @media (max-width: 1024px) {
+    width: calc(25% - 24px);
+    height: calc(10vw + 11px);
+  }
   &:hover {
-    /* opacity: 1; */
-    background-color: color($color a(75%));
+    opacity: 1;
+    background-color: rgba($color, 0.75);
   }
   &:focus {
-    box-shadow: 0 0 10px color($color a(75%));
+    box-shadow: 0 0 10px rgba($color, 0.75);
   }
   svg {
-    max-height: 100%;
+    max-width: 80%;
+    max-height: 80%;
     margin: auto;
-    padding: 20px 0;
+    padding: .5vw 0;
   }
-}
-
-.lingualeo {
-  background-image: url(https://s3.amazonaws.com/fvd-data/sdpreview/0/15d6a34/1393843647-53145dbf9bda0/preview.png);
-}
-.rutracker {
-  background-image: url(https://s3.amazonaws.com/fvd-data/sdpreview/0/5f2db104/1377529786-521b6fba653b0/preview.png);
-}
-.noname {
-  background-image: url(http://i583.photobucket.com/albums/ss274/bobbcattn/RLC%20Animals/Blue-Butterfly-psd48700.png);
-}
-.rutor {
-  background-image: url(http://www.userlogos.org/files/logos/jumpordie/rutor_01.png);
 }
