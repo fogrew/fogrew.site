@@ -97,7 +97,7 @@ module.exports = [
     type: 'svg',
     url: 'https://www.facebook.com/',
     color: '#3b5998',
-    tags: 'fb фб фейсбук соц'
+    tags: 'fb фб фейсбук соц social'
   },
   {
     name: 'vk',
@@ -105,7 +105,7 @@ module.exports = [
     type: 'svg',
     url: 'https://vk.com/',
     color: '#597da3',
-    tags: 'вконтакте соц'
+    tags: 'вконтакте соц social'
   },
   {
     name: 'lingualeo',
@@ -113,7 +113,7 @@ module.exports = [
     type: 'svg',
     url: 'https://lingualeo.com/',
     color: '#fff',
-    tags: 'английский обучение лингуа лео'
+    tags: 'английский обучение лингуа лео english'
   },
   {
     name: 'duolingo',
@@ -121,7 +121,7 @@ module.exports = [
     type: 'svg',
     url: 'https://www.duolingo.com/',
     color: '#fff',
-    tags: 'английский обучение дуолинго'
+    tags: 'английский обучение дуолинго english'
   },
   {
     name: 'linkedin',
@@ -129,7 +129,7 @@ module.exports = [
     type: 'svg',
     url: 'https://www.linkedin.com/',
     color: '#1c5d83',
-    tags: 'линкедин работа вакансии резюме'
+    tags: 'линкедин работа вакансии резюме соц social'
   },
   {
     name: 'twitter',
@@ -137,7 +137,7 @@ module.exports = [
     type: 'svg',
     url: 'https://twitter.com',
     color: '#00aeed',
-    tags: 'твиттер свиттер свитер'
+    tags: 'твиттер свиттер свитер соц social'
   },
   {
     name: 'tweetdeck',
@@ -145,7 +145,7 @@ module.exports = [
     type: 'svg',
     url: 'https://tweetdeck.twitter.com/',
     color: '#00acee',
-    tags: 'твиттер свиттер свитер твитдек'
+    tags: 'твиттер свиттер свитер твитдек соц social'
   },
   {
     name: 'codepen',
@@ -209,7 +209,7 @@ module.exports = [
     type: 'svg',
     url: 'https://bitbucket.org/',
     color: '#2d67a3',
-    tags: 'битбакет гит код версионирование'
+    tags: 'битбакет гит код версионирование code'
   },
   {
     name: 'trello',
@@ -241,7 +241,7 @@ module.exports = [
     type: 'svg',
     url: 'https://github.com/',
     color: '#333',
-    tags: 'опенсорс опен сорс гитхаб гит код версионирование'
+    tags: 'опенсорс опен сорс гитхаб гит код версионирование code'
   },
   {
     name: 'telegram',

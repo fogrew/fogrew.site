@@ -15,8 +15,6 @@ module.exports = function(gulp, bs) {
         var dirName = files[i],
           dirPath = path.join(paths.dev.svg, dirName),
           stats = fs.lstatSync(dirPath);
-        console.log(dirPath);
-        console.log(stats.isDirectory());
 
         var svgSpriteConfig = {
           shape: {
