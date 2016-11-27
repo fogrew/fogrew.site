@@ -220,7 +220,6 @@ function Searcher(opts) {
    * @param  {event} KeyboardEvent should be 'click'
    */
   self.addLoader = function(eventClick) {
-    eventClick.preventDefault();
     let box = eventClick.target.closest('.box');
     let spinner = $(self.options.spinner);
 
