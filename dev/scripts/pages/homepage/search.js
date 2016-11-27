@@ -11,7 +11,9 @@ function Searcher(opts) {
     input : '.find',
     tags : '.label',
     reset : '.reset',
-    box : '.box'
+    grid: '.grid',
+    box : '.box',
+    spinner: '.spinner'
   };
   self.options = Object.assign(defaults, opts);
 
@@ -213,8 +215,25 @@ function Searcher(opts) {
     document.head.appendChild(styleTag);
   }
 
+  /**
+   * Add load spinner over icon
+   * @param  {event} KeyboardEvent should be 'click'
+   */
+  self.addLoader = function(eventClick) {
+    let box = eventClick.target.closest('.box');
+    let spinner = $(self.options.spinner);
+
+    let left = box.offsetLeft + box.offsetWidth / 2 + 'px';
+    let top = box.offsetTop + box.offsetHeight / 2 + 'px';
+
+    spinner.style.display = 'block';
+    spinner.style.left = left;
+    spinner.style.top = top;
+  }
+
   $(self.options.form).addEventListener('submit', self.submitForm);
   $(self.options.input).addEventListener('keyup', self.filter);
+  $(self.options.grid).addEventListener('click', self.addLoader);
   $(self.options.tags).addEventListener('click', self.selectTag);
   $(self.options.reset).addEventListener('click', self.resetForm);
 
