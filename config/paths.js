@@ -2,21 +2,21 @@
 
 /* eslint-env node */
 
-var views = 'dev/views/';
+var dev = 'dev/';
 var dist = 'public/';
 
 module.exports = {
-  viewsDir: views,
+  viewsDir: dev + 'views/',
   distDir: dist,
   dev: {
-    scss:  'dev/styles/**/*.scss',
-    styles: 'dev/styles/pages/*.scss',
-    svg: 'dev/images/sprites/vector',
-    views: views+'**/*.njk',
-    pages: views+'pages/*/*.njk',
-    scripts: 'dev/scripts/pages/**/*.js',
-    jsModules: 'dev/scripts/pages/*.js',
-    images: views+'**/*.{jpg,png,svg}'
+    scss:  dev+'styles/**/*.scss',
+    styles: dev+'styles/pages/*.scss',
+    svg: dev+'images/sprites/vector',
+    views: dev+'views/**/*.njk',
+    pages: dev+'views/pages/*/*.njk',
+    scripts: dev+'scripts/pages/**/*.js',
+    jsModules: dev+'scripts/pages/*.js',
+    images: dev+'images/static/**/*.{jpg,png,svg}'
   },
   dist: {
       pages: dist,
