@@ -1,7 +1,8 @@
 $color: #fff;
+$spinnerSize: 40px;
 
 .grid {
-  max-height: 75vh;
+  height: 75vh;
   width: 85vw;
   display: flex;
   flex-wrap: wrap;
@@ -11,20 +12,17 @@ $color: #fff;
 .box {
   flex: auto;
   width: calc(100% / 5 - 8px);
-  height: calc(9vw + 6px);
+  height: calc(75vh / 5 - 8px);
   margin: 4px;
   display: flex;
-  background-color: rgba($color, 0.5);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background: rgba($color, 0.5);
   opacity: .8;
   transition: .2s ease;
   border-radius: 2px;
   outline: none;
   @media (max-width: 1024px) {
     width: calc(25% - 24px);
-    height: calc(10vw + 11px);
+    height: calc(100% / 5 - 8px);
   }
   &:hover {
     opacity: 1;
@@ -38,5 +36,27 @@ $color: #fff;
     max-height: 80%;
     margin: auto;
     padding: .5vw 0;
+  }
+}
+
+.spinner {
+  position: absolute;
+  display: none;
+  width: $spinnerSize;
+  height: $spinnerSize;
+  margin-top: -$spinnerSize / 2;
+  margin-left: -$spinnerSize / 2;
+  background-color: #333;
+
+  border-radius: 100%;
+  animation: sk-scaleout 1s infinite ease-in-out;
+}
+
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  } 100% {
+    transform: scale(1);
+    opacity: 0;
   }
 }

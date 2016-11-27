@@ -8,7 +8,7 @@ production:
   after_script:
     - cp -R ./public /home/sites/fogrew/fogrew.site/
   script:
-    - gulp build
+    - gulp build --min
   artifacts:
     paths:
     - public
