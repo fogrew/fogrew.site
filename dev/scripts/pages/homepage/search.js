@@ -150,6 +150,7 @@ function Searcher(opts) {
       if(engine.short + ' ' == firstWord) {
         window.location = engine.link + text;
       }
+      window.location = engines[1].link + value;
     });
   }
 
