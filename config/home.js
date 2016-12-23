@@ -255,7 +255,7 @@ module.exports = [
     name: 'kinopoisk',
     title: 'KinoPoisk',
     type: 'svg',
-    url: 'https://www.kinopoisk.ru/',
+    url: 'https://www.kinopoisk.ru/mykp/movies/list/type/3575/sort/premier_rus/vector/desc/vt/all/',
     color: '#fff',
     tags: 'кино поиск фильмы сериалы'
   },
