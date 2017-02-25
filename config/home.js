@@ -134,7 +134,7 @@ module.exports = [{
         name: 'twitter',
         title: 'Twitter',
         type: 'svg',
-        url: 'https://twitter.com',
+        url: 'https://m.twitter.com',
         color: '#00aeed',
         tags: 'твиттер свиттер свитер соц social'
     },
