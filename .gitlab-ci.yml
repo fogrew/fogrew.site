@@ -9,6 +9,7 @@ production:
     - ls
     - cp -R ./public /home/sites/fogrew/fogrew.site/
   script:
+    - npm install
     - gulp build --min
   artifacts:
     paths:
