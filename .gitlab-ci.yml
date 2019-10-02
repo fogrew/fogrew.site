@@ -6,6 +6,7 @@ production:
   before_script:
     - npm update --depth=0
   after_script:
+    - ls
     - cp -R ./public /home/sites/fogrew/fogrew.site/
   script:
     - gulp build --min
